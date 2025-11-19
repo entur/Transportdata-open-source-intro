@@ -8,7 +8,9 @@ Our mission is to make mobility seamless and accessible. We build and operate th
 
 This page collects the most essential public repositories maintained by the ROR team, covering everything from data pipelines and APIs to journey planning engines and developer utilities.
 
-For a graphical view, take a look at our [OVERVIEW OF COMPONENTS](https://app.mural.co/t/entur7578/m/entur7578/1675243352875/f57238026a6daceda8228b7ed10fab1e9dd6a7a2) 
+For a graphical view, take a look at our [OVERVIEW OF COMPONENTS]() **Make a simple overview**
+<img width="2550" height="1429" alt="image" src="https://github.com/user-attachments/assets/0a8ef6c8-85c1-4c86-a912-aa7bff4c0ff5" />
+
 
 ## Table of Contents
 
@@ -94,3 +96,9 @@ legg til flere
 ### Vehicle Map
 
 ### Mobility Map
+
+---
+# A full description of our complete ecosystem
+
+For a graphical view, take a look at our [OVERVIEW OF COMPONENTS](https://app.mural.co/t/entur7578/m/entur7578/1675243352875/f57238026a6daceda8228b7ed10fab1e9dd6a7a2) 
+
