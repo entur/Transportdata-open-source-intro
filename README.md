@@ -60,10 +60,21 @@ The tool supports **export to NeTEx**, making it possible to share standardized 
 - **Repository**: [github.com/entur/osrm-backend](https://github.com/entur/osrm-backend)
 
 ### Ninkasi
-skal vi ta denne med?
+**Ninkasi** is Entur’s tool for visualizing and exploring public transport data in a map-based, web‑UI dashboard. It provides high-level insights into route networks, stop places, and timetables, making the structure and coverage of transport services transparent and accessible.
 
-### Operator
-skal vi ta denne med?
+Ninkasi combines static schedule data (NeTEx/GTFS) with visual mapping to help planners and developers understand spatial patterns, monitor service coverage, and spot gaps or anomalies in the data. Its intuitive interface makes complex datasets easier to interpret, supporting better decision-making for operators and authorities.
+
+Within the broader **Entur ROR open-source ecosystem**, Ninkasi complements tools like **tiamat/abzu** (StopPlace Registry), **uttu/enki** (NPlan), and **Anshar/Lamassu** (real-time and shared mobility data) by providing a visual perspective. It allows users to explore both the quality and content of the data collected, bridging the gap between raw datasets and actionable insights.
+
+- **Repository**: [github.com/entur/ninkasi](https://github.com/entur/ninkasi)
+
+### Operator Portal (BEL)
+
+**Operator Portal (BEL)** is Entur’s web-based platform where Public Transport Authorities (PTA) and Public Transport Operators (PTO) can upload, validate, and manage their NeTEx datasets. It provides a streamlined interface for operators to submit timetable and network data, run validations, and ensure compliance with the Nordic NeTEx Profile before publication.
+
+BEL simplifies the data management workflow, helping operators maintain high-quality datasets while reducing errors and inconsistencies. It integrates with tools like **Antu** for validation and the **StopPlace Registry (tiamat/abzu)** to ensure accurate references, making it a central hub for national public transport data operations. We also encourage operators to use **automatic data delivery** whenever possible to further streamline updates and reduce manual effort.
+
+- **Repository**: [github.com/entur/bel](https://github.com/entur/bel)
 
 ---
 ## Aggregation of data to national dataset
@@ -113,6 +124,13 @@ OTP has a **successful and active worldwide community** of developers, operators
 The project is governed through a **Project Leadership Committee (PLC)** and a central management role, providing strategic guidance, release management, and quality oversight. This combination of open collaboration, structured governance, and active community engagement has made OTP a reliable and widely adopted solution for multimodal journey planning worldwide.
 
 - **Repository**: [github.com/opentripplanner/OpenTripPlanner](https://github.com/opentripplanner/OpenTripPlanner)
+
+### Geocoder (Photon)
+**Photon** is Entur’s geocoding service built on top of the open-source [Photon](https://github.com/komoot/photon) project. It translates free-text addresses, place names, or points of interest into geographic coordinates, making it easier to integrate location-based search into journey planners and other mobility applications.
+
+Photon can be used with **OpenTripPlanner (OTP)** or any other public transport use case, as well as any application that needs to find points of interest, addresses, or stop places. By running Photon internally, we provide a reliable, high-performance geocoder tailored to Norway’s geography, supporting local place names and seamless integration with transport data.
+
+- **Repository**: [github.com/entur/photon](https://github.com/entur/photon)
 ### Ukur
 **Ukur** is Entur’s real-time monitoring tool for SIRI feeds. It identifies relevant changes in the SIRI data we receive and determines whether these changes are significant enough to push to end users. This is used for subscribers to receive notifications about updates affecting their planned trips or typical commuting times in the app.
 
@@ -126,8 +144,14 @@ By filtering and prioritizing SIRI updates, Ukur ensures that only actionable, m
 ## Visualization
 
 ### Vehicle Map
+**Vehicle Map** was originally developed to visualize errors in **SIRI Vehicle Monitoring (VM)** feeds. It has since evolved into a tool to showcase the high quality and content of the SIRI data we receive. Vehicle Map allows operators and developers to explore vehicle positions, track performance, and verify the completeness and accuracy of real-time public transport data.
+
+- **Repository**: [github.com/entur/vehicle-map-demo](https://github.com/entur/vehicle-map-demo)
 
 ### Mobility Map
+**MobilityMap** is a demo map that visualizes all vehicles received via **GBFS feeds** through the **Mobility Hub (Lamassu)**. It provides an interactive way to explore micromobility data such as bikes and scooters, helping developers, operators, and stakeholders understand availability, usage, and distribution of shared mobility services.
+
+- **Repository**: [github.com/entur/mobility-map-demo](https://github.com/entur/mobility-map-demo)
 
 ---
 # A full description of our complete ecosystem
