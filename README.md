@@ -180,3 +180,4 @@ By filtering and prioritizing SIRI updates, Ukur ensures that only actionable, m
 
 For a graphical view, take a look at our [OVERVIEW OF COMPONENTS](https://app.mural.co/t/entur7578/m/entur7578/1675243352875/f57238026a6daceda8228b7ed10fab1e9dd6a7a2) 
 
+If you are interested in one or more of our projects, we encourage you to contact us at [kollektivdata@entur.org](mailto:kollektivdata@entur.org). Let's make a difference together. 
