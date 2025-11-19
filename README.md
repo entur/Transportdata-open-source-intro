@@ -69,17 +69,36 @@ skal vi ta denne med?
 ## Aggregation of data to national dataset
 
 ### Real-time hub for dynamic data
-Anshar
+
+**Anshar** is Entur’s real-time hub for aggregating and distributing SIRI data across Norway’s public transport ecosystem. It collects, normalizes, and processes **SIRI-ET (Estimated Timetable)**, **SIRI-VM (Vehicle Monitoring)**, and **SIRI-SX (Situation Exchange)** from multiple operators into a unified and consistent real-time data stream.
+
+Anshar ensures that real-time information is reliable, complete, and harmonized before it is consumed by journey planners, disruption services, and downstream APIs. By centralizing real-time processing, Anshar reduces complexity for operators and provides a stable foundation for high-quality traveller information across all modes.
+
+- **Repository**: [https://github.com/entur/anshar](https://github.com/entur/anshar)
 
 ### Micro Mobility Hub, to aggregate data for e-scooters, city bikes and shared cars 
-Lamassu
+
+**Lamassu** is Entur’s data-quality and aggreagation service for shared mobility feeds based on **GBFS (General Bikeshare Feed Specification)** — the open standard used globally for bike, scooter, and micromobility data. It validates and distribute GBFS feeds from operators to show available vehicles, station data, real-time updates, fares and pricing models and more, for use in journey planner apis.  
+
+By providing precise diagnostics and continuous monitoring, Lamassu helps operators deliver higher-quality real-time micromobility data, improving availability information and enhancing multimodal journey planning.
+
+- **Repository**: [https://github.com/entur/lamassu](https://github.com/entur/lamassu)
 
 ---
 ## Validation
 
-### Library
+### NeTEx Validation Library
+The **NeTEx Validation Library** is Entur’s open-source tool for validating NeTEx datasets. It analyzes NeTEx files and generates detailed validation reports. The library supports multiple validation layers, including XML Schema checks, XPath rules, and JAXB object-model validations, allowing complex consistency and reference checks. It comes with default validators for ID uniqueness, reference consistency, and other common rules, and can be extended with custom validators. This library can be used by anyone, regardless of national or local NeTEx profiles.
 
-### Antu
+- **Repository**: [github.com/entur/netex-validator-java](https://github.com/entur/netex-validator-java)
+
+### Data pipeline validation
+**Antu** is Entur’s validation service for NeTEx datasets, ensuring that timetable and network data meet the requirements of the **Nordic NeTEx Profile**. It uses Entur’s internal **NeTEx Validation Library** to perform structural, semantic, and profile-specific checks, and produces detailed reports that operators and data providers can use to correct issues.
+
+Antu also integrates with the **National StopPlace Registry (NSR)** to validate references to stop places, ensuring that all StopPlace and Quay IDs in NeTEx datasets are accurate and consistent. This coordination between timetable data and core infrastructure data is essential for delivering high-quality journey planning and multimodal routing.
+
+- **Repository**: [github.com/entur/antu](https://github.com/entur/antu)
+<img width="816" height="173" alt="image" src="https://github.com/user-attachments/assets/14d5ee0d-5de0-49bd-af75-5503151d38e9" />
 
 ---
 ## Data use 
