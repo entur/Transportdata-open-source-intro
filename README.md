@@ -12,147 +12,85 @@ For a graphical view, take a look at our [OVERVIEW OF COMPONENTS](https://app.mu
 
 ## Table of Contents
 
-- [Producing Data](#producing-data)
-    - [Libraries](#libraries)
-    - [Converters](#converters)
-    - [Data Collection and Maintenance Tools](#data-collection-and-maintenance-tools)
-    - [Merge Tools](#merge-tools)
-    - [Analysis Tools](#analysis-tools)
-    - [Timetable Publishing Tools](#timetable-publishing-tools)
-    - [Validators](#validators)
-- [Realtime](#realtime)
-    - [Realtime Libraries & Demo Apps](#realtime-libraries--demo-apps)
-    - [Realtime Validators](#realtime-validators)
-    - [Realtime and Other Real-time API Archival Tools](#realtime-and-other-real-time-api-archival-tools)
-    - [Realtime Converters](#realtime-converters)
-    - [Realtime Utilities](#realtime-utilities)
-- [Sharing Data](#sharing-data)
-- [Using Data](#using-data)
-    - [Consumer Apps](#consumer-apps)
-        - [Web Apps (open source)](#web-apps-open-source)
-        - [Web Apps (closed source)](#web-apps-closed-source)
-        - [Native Apps (open source)](#native-apps-open-source)
-        - [Native Apps (closed source)](#native-apps-closed-source)
-    - [Software for Creating APIs](#software-for-creating-apis)
-    - [SDKs](#sdks)
-    - [Visualizations](#visualizations)
-- [Resources](#resources)
-    - [Community](#community)
 
+    
+ 
+
+
+### National StopPlace Registry (NSR)
+
+The **National StopPlace Registry (NSR)** provides a centralized system for managing information about public transport stops across Norway. It consists of **tiamat** (backend) and **abzu** (frontend).  
+
+NSR ensures that stop data is consistent, up-to-date, and accessible for all operators, planners, and third-party applications. It supports versioning, validation, and export to standard formats like **NeTEx**, making it easier to integrate stop information into journey planners, scheduling tools, and public APIs.  
+
+Fixing core data issues is crucial for the entire public transport ecosystem, and stop places are at the very heart of this infrastructure. By establishing a **unique description and ID for each stop**, NSR resolves many downstream problems, enabling more reliable journey planning, scheduling, and data sharing across operators and applications.  
+
+- **Backend (tiamat)**: [github.com/entur/tiamat](https://github.com/entur/tiamat)  
+- **Frontend (abzu)**: [github.com/entur/abzu](https://github.com/entur/abzu)
 
 ---
+## To produce data 
+Here we describe our most useful tools to produce data to be sent to the National Access Point (NAP) 
 
-## Producing Data
+### NPlan
 
-### Libraries
+**NPlan** is a lightweight planning tool consisting of two components: **uttu** (backend) and **enki** (frontend). It was developed to produce flexible transport services and has been extended to support scheduling for small operators’ networks.  
 
-- **netex-java-model**  
-  Java bindings (JAXB) for the NeTEx timetable schema. Provides a programmatic model for reading and writing NeTEx data in Java.
+NPlan is designed as a simple planning solution for operators who currently do not have dedicated planning software — many rely on Excel sheets, PDFs, or printed timetables at stops. With NPlan, these operators can manage and maintain their schedules more efficiently.  
 
-### Converters
+The tool supports **export to NeTEx**, making it possible to share standardized timetable data with national systems or other transport tools. Its focus on small operators and flexible services fills a crucial gap in public transport planning, enabling more consistent, data-driven operations even for networks with limited resources.  
 
-- **netex-gtfs-converter-java**  
-  Converts NeTEx datasets (using the Nordic NeTEx Profile) into standard GTFS format.
+- **Backend (uttu)**: [github.com/entur/uttu](https://github.com/entur/uttu)  
+- **Frontend (enki)**: [github.com/entur/enki](https://github.com/entur/enki)
 
-- **damu**  
-  Orchestrates conversion of NeTEx exports into GTFS by downloading NeTEx data, running the converter, and storing the resulting GTFS.
+### Extime
 
-### Data Collection and Maintenance Tools
+**Extime** is a tool for producing NeTEx datasets from aviation data provided by Avinor. It converts raw flight and airport information into structured NeTEx, enabling journey planners and other systems to integrate aviation connections into multimodal travel planning.  
 
-- **marduk**  
-  Coordinates the full data-import pipeline for public transport data: validation, import, merging, conversion, and triggering graph rebuilds.
+- **Data source**: [Avinor Flydata](https://partner.avinor.no/tjenester/flydata/)  
+- **Repository**: [github.com/entur/extime](https://github.com/entur/extime)
 
-- **tiamat**  
-  Backend service for Norway’s national Stop Place Register. Handles import, validation, versioning, and GraphQL/NeTEx export of stop-place data.
 
-### Merge Tools
+### OSRM (Open Source Routing Machine)
 
-*(No publicly listed specific tools in this category yet.)*
+**OSRM** is used ~~a high-performance routing engine for street networks. At Entur, we use OSRM~~ to generate **ServiceLinks** when they are missing in the received NeTEx datasets, and automatically add them back to the dataset. This ensures that journey planners have complete routing information, even when the source data is incomplete.  
 
-### Analysis Tools
+- **Repository**: [github.com/entur/osrm-backend](https://github.com/entur/osrm-backend)
 
-*(No publicly listed specific tools in this category yet.)*
+### Ninkasi
+skal vi ta denne med?
 
-### Timetable Publishing Tools
-
-*(No publicly listed specific tools in this category yet.)*
-
-### Validators
-
-- **antu**  
-  Validates NeTEx PublicationDelivery files against the Nordic NeTEx Profile. Splits validation jobs, aggregates results, and exposes results via a REST API.
+### Operator
+skal vi ta denne med?
 
 ---
+## Aggregation of data to national dataset
 
-## Realtime
+### Real-time hub for dynamic data
+Anshar
 
-### Realtime Libraries & Demo Apps
-
-*(No publicly listed libraries or demos yet.)*
-
-### Realtime Validators
-
-*(No publicly listed validators yet.)*
-
-### Realtime and Other Real-time API Archival Tools
-
-*(No publicly listed archival tools yet.)*
-
-### Realtime Converters
-
-- **kishar**  
-  Converts incoming SIRI data (via Pub/Sub) to GTFS-RT (Trip Updates, Vehicle Positions, Alerts) and provides standard GTFS-RT endpoints for consumption.
-
-### Realtime Utilities
-
-*(No publicly listed utilities yet.)*
+### Micro Mobility Hub, to aggregate data for e-scooters, city bikes and shared cars 
+Lamassu
 
 ---
+## Validation
 
-## Sharing Data
+### Library
 
-*(No publicly listed specific tools in this category yet.)*
-
----
-
-## Using Data
-
-### Consumer Apps
-
-#### Web Apps (open source)
-
-- **OpenTripPlanner-LegacyHSLFork**  
-  Entur’s fork of OpenTripPlanner v2. Provides multimodal journey planning using GTFS and OSM, with support for real-time updates and disruption handling.
-
-#### Web Apps (closed source)
-
-*(None publicly available in this category.)*
-
-#### Native Apps (open source)
-
-*(None publicly available in this category.)*
-
-#### Native Apps (closed source)
-
-*(None publicly available in this category.)*
-
-### Software for Creating APIs
-
-*(No publicly listed tools in this category.)*
-
-### SDKs
-
-*(No publicly listed SDKs yet.)*
-
-### Visualizations
-
-*(No publicly listed visualization tools yet.)*
+### Antu
 
 ---
+## Data use 
 
-## Resources
+### OpenTripPlanner
 
-### Community
+### Ukur
 
-*(To be added if applicable.)*
+legg til flere
 
+---
+## Visualization
+
+### Vehicle Map
+
+### Mobility Map
