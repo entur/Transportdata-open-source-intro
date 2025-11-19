@@ -1,14 +1,12 @@
-# Introduction to team RoR open-source projects
+# Introduction to "Entur ROR" and its open-source projects
 
-## About Entur ROR
+## What is "Entur ROR"?
 
-Entur ROR (Routes and Journey Planning) is the team responsible for Entur’s open-source projects that power national journey planning in Norway. We develop and maintain the core components that collect, structure and serve public transport data across all modes — buses, trains, ferries, trams, bikes and shared mobility.
+We are Entur ROR (Open Data and Journey Planning), the team responsible for Entur for collecting, structuring and publishing public transport data across all modes — buses, trains, ferries, trams, bikes and shared mobility. Our mission is to make mobility seamless and easily accessible for everyone. To achieve this, we develop and maintain a range of open-source applications that power national journey planning and open data aggregation in Norway. We choose to publish our tools and services as open source to support transparency, collaboration and innovation across the mobility ecosystem, not just in Norway, but internationally.
 
-Our mission is to make mobility seamless and accessible. We build and operate the engines behind Entur’s national journey planner, and we publish our tools and services as open source to support transparency, collaboration and innovation across the mobility ecosystem.
+This page collects the most essential public repositories maintained by the Entur ROR team, covering everything from data pipelines and APIs to journey planning engines and developer utilities.
 
-This page collects the most essential public repositories maintained by the ROR team, covering everything from data pipelines and APIs to journey planning engines and developer utilities.
-
-For a graphical view, take a look at our [OVERVIEW OF COMPONENTS]() **Make a simple overview**
+For a visual overview, take a look at our [OVERVIEW OF COMPONENTS]() **Make a simple overview**
 <img width="2550" height="1429" alt="image" src="https://github.com/user-attachments/assets/0a8ef6c8-85c1-4c86-a912-aa7bff4c0ff5" />
 
 
