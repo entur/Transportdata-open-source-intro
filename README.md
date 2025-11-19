@@ -8,6 +8,8 @@ Our mission is to make mobility seamless and accessible. We build and operate th
 
 This page collects the most essential public repositories maintained by the ROR team, covering everything from data pipelines and APIs to journey planning engines and developer utilities.
 
+For a graphical view, take a look at our [OVERVIEW OF COMPONENTS](https://app.mural.co/t/entur7578/m/entur7578/1675243352875/f57238026a6daceda8228b7ed10fab1e9dd6a7a2) 
+
 ## Table of Contents
 
 - [Producing Data](#producing-data)
