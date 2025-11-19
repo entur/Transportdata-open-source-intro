@@ -75,7 +75,7 @@ The tool supports **export to NeTEx**, making it possible to share standardized 
 
 ### OSRM (Open Source Routing Machine)
 
-**OSRM** is used ~~a high-performance routing engine for street networks. At Entur, we use OSRM~~ to generate **ServiceLinks** when they are missing in the received NeTEx datasets, and automatically add them back to the dataset. This ensures that journey planners have complete routing information, even when the source data is incomplete.  
+**OSRM** is used to generate **ServiceLinks** when they are missing in the received NeTEx datasets, and automatically add them back to the dataset. This ensures that journey planners have complete routing information, even when the source data is incomplete.  
 
 - **Repository**: [github.com/entur/osrm-backend](https://github.com/entur/osrm-backend)
 
