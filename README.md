@@ -98,16 +98,29 @@ The **NeTEx Validation Library** is Entur’s open-source tool for validating Ne
 Antu also integrates with the **National StopPlace Registry (NSR)** to validate references to stop places, ensuring that all StopPlace and Quay IDs in NeTEx datasets are accurate and consistent. This coordination between timetable data and core infrastructure data is essential for delivering high-quality journey planning and multimodal routing.
 
 - **Repository**: [github.com/entur/antu](https://github.com/entur/antu)
-<img width="816" height="173" alt="image" src="https://github.com/user-attachments/assets/14d5ee0d-5de0-49bd-af75-5503151d38e9" />
+<img width="1263" height="73" alt="image" src="https://github.com/user-attachments/assets/219c155c-152a-4caf-ae42-f4adff3d9b2b" />
+
 
 ---
 ## Data use 
 
-### OpenTripPlanner
+### OpenTripPlanner (OTP)
 
+**OpenTripPlanner (OTP)** is an open-source multimodal journey planning engine that supports routing for public transport, walking, cycling, and driving. It uses NeTEx, SIRI, GBFS, GTFS, GTFS RT, GTFS Flex, GTFS Fares and OpenStreetMap data to generate trip plans, including transfers, schedules, and real-time updates where available. OTP is highly configurable and extensible, allowing integration with real-time feeds, custom routing logic, and external services.
+
+OTP has a **successful and active worldwide community** of developers, operators, and researchers who collaborate to continuously improve the software. The project maintains a structured development process, including **monthly product meetings** and **weekly development meetings**, to coordinate contributions, review progress, and plan new features. This strong community ensures that OTP evolves to meet the diverse needs of cities and operators globally.
+
+The project is governed through a **Project Leadership Committee (PLC)** and a central management role, providing strategic guidance, release management, and quality oversight. This combination of open collaboration, structured governance, and active community engagement has made OTP a reliable and widely adopted solution for multimodal journey planning worldwide.
+
+- **Repository**: [github.com/opentripplanner/OpenTripPlanner](https://github.com/opentripplanner/OpenTripPlanner)
 ### Ukur
+**Ukur** is Entur’s real-time monitoring tool for SIRI feeds. It identifies relevant changes in the SIRI data we receive and determines whether these changes are significant enough to push to end users. This is used for subscribers to receive notifications about updates affecting their planned trips or typical commuting times in the app.
 
-legg til flere
+By filtering and prioritizing SIRI updates, Ukur ensures that only actionable, meaningful changes are communicated to users, improving the quality and relevance of push notifications while reducing unnecessary alerts.
+
+- **Repository**: [github.com/entur/ukur](https://github.com/entur/ukur)
+
+*legg til flere*
 
 ---
 ## Visualization
