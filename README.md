@@ -150,7 +150,7 @@ The project is governed through a **Project Leadership Committee (PLC)** and a c
 
 Geocoder can be used with **OpenTripPlanner (OTP)** or any other public transport use case, as well as any application that needs to find points of interest, addresses, or stop places. By running Geocoder internally, we provide a reliable, high-performance geocoder tailored to Norway’s geography, supporting local place names and seamless integration with transport data.
 
-- **Repository**: [github.com/entur/photon](https://github.com/entur/photon)
+- **Repository**: [github.com/entur/geocoder](https://github.com/entur/geocoder)
 ### Ukur
 **Ukur** is Entur’s real-time monitoring tool for SIRI feeds. It identifies relevant changes in the SIRI data we receive and determines whether these changes are significant enough to push to end users. This is used for subscribers to receive notifications about updates affecting their planned trips or typical commuting times in the app.
 
