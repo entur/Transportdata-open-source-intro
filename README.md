@@ -143,7 +143,7 @@ OTP has a **successful and active worldwide community** of developers, operators
 
 The project is governed through a **Project Leadership Committee (PLC)** and a central management role, providing strategic guidance, release management, and quality oversight. This combination of open collaboration, structured governance, and active community engagement has made OTP a reliable and widely adopted solution for multimodal journey planning worldwide.
 
-- **Repository**: [github.com/opentripplanner/OpenTripPlanner](https://github.com/opentripplanner/OpenTripPlanner)
+- **Repository**: [github.com/entur/OpenTripPlanner](https://github.com/entur/OpenTripPlanner)
 
 ### Geocoder (Photon)
 **Photon** is Entur’s geocoding service built on top of the open-source [Photon](https://github.com/komoot/photon) project. It translates free-text addresses, place names, or points of interest into geographic coordinates, making it easier to integrate location-based search into journey planners and other mobility applications.
