@@ -146,9 +146,9 @@ The project is governed through a **Project Leadership Committee (PLC)** and a c
 - **Repository**: [github.com/entur/OpenTripPlanner](https://github.com/entur/OpenTripPlanner)
 
 ### Geocoder (Photon)
-**Photon** is Entur’s geocoding service built on top of the open-source [Photon](https://github.com/komoot/photon) project. It translates free-text addresses, place names, or points of interest into geographic coordinates, making it easier to integrate location-based search into journey planners and other mobility applications.
+**Geocoder** is Entur’s geocoding service built on top of the open-source [Photon](https://github.com/komoot/photon) project. It translates free-text addresses, place names, or points of interest into geographic coordinates, making it easier to integrate location-based search into journey planners and other mobility applications.
 
-Photon can be used with **OpenTripPlanner (OTP)** or any other public transport use case, as well as any application that needs to find points of interest, addresses, or stop places. By running Photon internally, we provide a reliable, high-performance geocoder tailored to Norway’s geography, supporting local place names and seamless integration with transport data.
+Geocoder can be used with **OpenTripPlanner (OTP)** or any other public transport use case, as well as any application that needs to find points of interest, addresses, or stop places. By running Geocoder internally, we provide a reliable, high-performance geocoder tailored to Norway’s geography, supporting local place names and seamless integration with transport data.
 
 - **Repository**: [github.com/entur/photon](https://github.com/entur/photon)
 ### Ukur
