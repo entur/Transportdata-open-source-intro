@@ -17,9 +17,7 @@ For a visual overview, take a look at our [OVERVIEW OF COMPONENTS]() **Make a si
 - [To produce data](#to-produce-data)
   - [NPlan](#nplan)
   - [Extime](#extime)
-  - [OSRM (Open Source Routing Machine)](#osrm-open-source-routing-machine)
-  - [Ninkasi](#ninkasi)
-  - [Operator Portal (BEL)](#operator-portal-bel)
+  - [Avvik](#avvik)
 - [Aggregation of data to national dataset](#aggregation-of-data-to-national-dataset)
   - [Real-time hub for dynamic data (Anshar)](#real-time-hub-for-dynamic-data)
   - [Micro Mobility Hub (Lamassu)](#micro-mobility-hub-to-aggregate-data-for-e-scooters-city-bikes-and-shared-cars)
@@ -72,30 +70,15 @@ The tool supports **export to NeTEx**, making it possible to share standardized 
 - **Data source**: [Avinor Flydata](https://partner.avinor.no/tjenester/flydata/)  
 - **Repository**: [github.com/entur/extime](https://github.com/entur/extime)
 
+### Avvik
 
-### OSRM (Open Source Routing Machine)
+**Avvik* is a light-weight tool for producing real-time data for deviation messages (textual), cancellations and extra-journeys in the form of SIRI-SX and SIRI-ET streams.
 
-**OSRM** is used to generate **ServiceLinks** when they are missing in the received NeTEx datasets, and automatically add them back to the dataset. This ensures that journey planners have complete routing information, even when the source data is incomplete.  
+It is composed of two components:
 
-- **Repository**: [github.com/entur/osrm-backend](https://github.com/entur/osrm-backend)
-
-### Ninkasi
-**Ninkasi** is Entur’s tool for visualizing and exploring public transport data in a map-based, web‑UI dashboard. It provides high-level insights into route networks, stop places, and timetables, making the structure and coverage of transport services transparent and accessible.
-
-Ninkasi combines static schedule data (NeTEx/GTFS) with visual mapping to help planners and developers understand spatial patterns, monitor service coverage, and spot gaps or anomalies in the data. Its intuitive interface makes complex datasets easier to interpret, supporting better decision-making for operators and authorities.
-
-Within the broader **Entur ROR open-source ecosystem**, Ninkasi complements tools like **tiamat/abzu** (StopPlace Registry), **uttu/enki** (NPlan), and **Anshar/Lamassu** (real-time and shared mobility data) by providing a visual perspective. It allows users to explore both the quality and content of the data collected, bridging the gap between raw datasets and actionable insights.
-
-- **Repository**: [github.com/entur/ninkasi](https://github.com/entur/ninkasi)
-
-### Operator Portal (BEL)
-
-**Operator Portal (BEL)** is Entur’s web-based platform where Public Transport Authorities (PTA) and Public Transport Operators (PTO) can upload, validate, and manage their NeTEx datasets. It provides a streamlined interface for operators to submit timetable and network data, run validations, and ensure compliance with the Nordic NeTEx Profile before publication.
-
-BEL simplifies the data management workflow, helping operators maintain high-quality datasets while reducing errors and inconsistencies. It integrates with tools like **Antu** for validation and the **StopPlace Registry (tiamat/abzu)** to ensure accurate references, making it a central hub for national public transport data operations. We also encourage operators to use **automatic data delivery** whenever possible to further streamline updates and reduce manual effort.
-
-- **Repository**: [github.com/entur/bel](https://github.com/entur/bel)
-
+- **Backend(enlil)**: [github.com/entur/uttu](https://github.com/entur/enlil)  
+- **Frontend (nirgali)**: [github.com/entur/enki](https://github.com/entur/nirgali)
+  
 ---
 ## Aggregation of data to national dataset
 
