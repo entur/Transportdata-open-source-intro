@@ -6,7 +6,7 @@ We are Entur ROR (Open Data and Journey Planning), the team responsible for Entu
 
 This page collects the most essential public repositories maintained by the Entur ROR team, covering everything from data pipelines and APIs to journey planning engines and developer utilities.
 
-For a visual overview, take a look at our [OVERVIEW OF COMPONENTS]() **Make a simple overview**
+For a visual overview, take a look at our [OVERVIEW OF COMPONENTS](https://app.mural.co/t/entur7578/m/entur7578/1675243352875/f57238026a6daceda8228b7ed10fab1e9dd6a7a2) **Make a simple overview**
 <img width="2550" height="1429" alt="image" src="https://github.com/user-attachments/assets/0a8ef6c8-85c1-4c86-a912-aa7bff4c0ff5" />
 
 
